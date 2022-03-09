@@ -1,16 +1,24 @@
 package com.yeong.sample
 
 import com.yeong.core.component.BindingActivity
+import com.yeong.core.logger.mLog
 import com.yeong.sample.databinding.ActivityMainBinding
 
 class MainActivity : BindingActivity<ActivityMainBinding>() {
 
-    override fun initView() {
-
+    private val dialogTest by lazy {
+        TestDialogFragment()
+            .setSubmitCallback { mLog.i("dialog submit") }
+            .setCancelCallback { mLog.i("dialog isCancel : $it") }
     }
 
-    override val layoutId: Int
-        get() = R.layout.activity_main
+    override val layoutId: Int = R.layout.activity_main
+
+    override fun initView() {
+        binding.sampleTestButton.setOnClickListener {
+            dialogTest.show(supportFragmentManager, "")
+        }
+    }
 
     override fun initViewBinding() {
 
