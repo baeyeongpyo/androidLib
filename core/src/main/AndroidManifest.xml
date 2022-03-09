@@ -5,7 +5,7 @@
     <application>
 
         <provider
-            android:name=".component.CoreModuleInitApp"
+            android:name=".CoreModuleInitApp"
             android:authorities="${applicationId}.sharedModuleInitApplication"
             android:exported="false" />
     </application>

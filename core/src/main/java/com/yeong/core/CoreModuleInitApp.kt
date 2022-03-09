@@ -1,4 +1,4 @@
-package com.yeong.core.component
+package com.yeong.core
 
 import android.content.ContentProvider
 import android.content.ContentValues
