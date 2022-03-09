@@ -1,6 +1,6 @@
 package com.yeong.core.component.Dialog
 
-import android.content.Context
+import android.content.DialogInterface
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.Drawable
@@ -27,8 +27,6 @@ abstract class BaseDialogFragment<T> : DialogFragment() {
 
     private var windowWidthSize: Int = 0
     private var windowHeightSize: Int = 0
-
-    private var isCancelEvent = false
 
     open fun dialogOutSizeTouchBlocking(): Boolean = false
 
@@ -76,14 +74,8 @@ abstract class BaseDialogFragment<T> : DialogFragment() {
         return this
     }
 
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        isCancelEvent = false
-    }
-
     protected open fun cancel() {
-        isCancelEvent = true
-        cancelCallback?.dialogCancel(isCancelEvent)
+        cancelCallback?.dialogCancel(true)
         dismiss()
     }
 
@@ -101,8 +93,9 @@ abstract class BaseDialogFragment<T> : DialogFragment() {
         if (lifecycle.currentState < Lifecycle.State.STARTED) super.show(manager, tag)
     }
 
-    override fun dismiss() {
-        super.dismiss()
-        if (isCancelEvent.not()) cancelCallback?.dialogCancel(isCancelEvent)
+    final override fun onCancel(dialog: DialogInterface) {
+        super.onCancel(dialog)
+        cancelCallback?.dialogCancel(false)
     }
+
 }
