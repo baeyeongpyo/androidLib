@@ -12,9 +12,9 @@ abstract class BindingActivity<BINDING : ViewDataBinding> : BaseActivity() {
 
     protected abstract val layoutId: Int
 
-    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
-        super.onCreate(savedInstanceState, persistentState)
+    override fun onCreate(savedInstanceState: Bundle?) {
         _binding = DataBindingUtil.setContentView(this, layoutId)
+        super.onCreate(savedInstanceState)
         initViewBinding()
         observeBinding()
     }
