@@ -1,11 +1,11 @@
 package com.yeong.easingmodule.impl.expo
 
 import com.yeong.easingmodule.type.type.EasingExpo
-import com.yeong.easingmodule.type.way.EasingOut
+import com.yeong.easingmodule.type.way.EasingInOut
 import com.yeong.easingmodule.util.EasingUtil
 import java.lang.Math.pow
 
-class EasingInOutExpo : EasingExpo, EasingOut {
+class EasingInOutExpo : EasingExpo, EasingInOut {
     @Suppress("ReplaceJavaStaticMethodWithKotlinAnalog")
     override fun calculator(n: Number): Number =
         EasingUtil.bindCalcul(n) { x ->

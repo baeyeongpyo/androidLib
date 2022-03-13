@@ -1,13 +1,11 @@
 package com.yeong.easingmodule.impl.expo
 
 import com.yeong.easingmodule.type.type.EasingBounce
-import com.yeong.easingmodule.type.way.EasingOut
+import com.yeong.easingmodule.type.way.EasingInOut
 import com.yeong.easingmodule.util.EasingUtil
-import com.yeong.easingmodule.util.EasingValue.c2
-import java.lang.Math.pow
 
 @Suppress("SpellCheckingInspection")
-class EasingInOutBounce : EasingBounce, EasingOut {
+class EasingInOutBounce : EasingBounce, EasingInOut {
     @Suppress("ReplaceJavaStaticMethodWithKotlinAnalog")
     override fun calculator(n: Number): Number =
         EasingUtil.bindCalcul(n) { x ->

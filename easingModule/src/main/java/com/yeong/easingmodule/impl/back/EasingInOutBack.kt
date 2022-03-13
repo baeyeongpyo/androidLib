@@ -1,14 +1,13 @@
 package com.yeong.easingmodule.impl.expo
 
 import com.yeong.easingmodule.type.type.EasingBack
-import com.yeong.easingmodule.type.way.EasingOut
+import com.yeong.easingmodule.type.way.EasingInOut
 import com.yeong.easingmodule.util.EasingUtil
 import com.yeong.easingmodule.util.EasingValue.c2
 import java.lang.Math.pow
-import kotlin.math.sqrt
 
 @Suppress("SpellCheckingInspection")
-class EasingInOutBack : EasingBack, EasingOut {
+class EasingInOutBack : EasingBack, EasingInOut {
     @Suppress("ReplaceJavaStaticMethodWithKotlinAnalog")
     override fun calculator(n: Number): Number =
         EasingUtil.bindCalcul(n) { x ->

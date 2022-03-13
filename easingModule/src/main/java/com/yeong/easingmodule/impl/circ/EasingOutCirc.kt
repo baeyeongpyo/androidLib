@@ -1,7 +1,6 @@
 package com.yeong.easingmodule.impl.expo
 
 import com.yeong.easingmodule.type.type.EasingCirc
-import com.yeong.easingmodule.type.type.EasingExpo
 import com.yeong.easingmodule.type.way.EasingOut
 import com.yeong.easingmodule.util.EasingUtil
 import java.lang.Math.pow

@@ -1,14 +1,14 @@
 package com.yeong.easingmodule.impl.expo
 
 import com.yeong.easingmodule.type.type.EasingElastic
-import com.yeong.easingmodule.type.way.EasingOut
+import com.yeong.easingmodule.type.way.EasingInOut
 import com.yeong.easingmodule.util.EasingUtil
 import com.yeong.easingmodule.util.EasingValue.c5
 import java.lang.Math.pow
 import java.lang.Math.sin
 
 @Suppress("SpellCheckingInspection")
-class EasingInOutElastic : EasingElastic, EasingOut {
+class EasingInOutElastic : EasingElastic, EasingInOut {
     @Suppress("ReplaceJavaStaticMethodWithKotlinAnalog")
     override fun calculator(n: Number): Number =
         EasingUtil.bindCalcul(n) { x ->
