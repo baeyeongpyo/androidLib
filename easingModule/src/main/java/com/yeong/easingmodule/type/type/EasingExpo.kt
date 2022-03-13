@@ -1,3 +1,5 @@
 package com.yeong.easingmodule.type.type
 
-interface EasingExpo
+import com.yeong.easingmodule.type.Easing
+
+interface EasingExpo : Easing
