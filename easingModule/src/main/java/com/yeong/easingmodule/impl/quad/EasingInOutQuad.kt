@@ -7,6 +7,7 @@ import java.lang.Math.pow
 
 class EasingInOutQuad : EasingQuad, EasingInOut {
     override fun calculator(n: Number): Number =
+        @Suppress("ReplaceJavaStaticMethodWithKotlinAnalog")
         EasingUtil.bindCalcul(n) { x ->
             if (x < .5)
                 2 * x * x

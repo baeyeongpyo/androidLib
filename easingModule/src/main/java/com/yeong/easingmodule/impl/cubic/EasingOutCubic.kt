@@ -7,5 +7,6 @@ import java.lang.Math.pow
 
 class EasingOutCubic : EasingCubic, EasingOut {
     override fun calculator(n: Number): Number =
+        @Suppress("ReplaceJavaStaticMethodWithKotlinAnalog")
         EasingUtil.bindCalcul(n) { x -> 1 - pow(1 - x, 3.0) }
 }
