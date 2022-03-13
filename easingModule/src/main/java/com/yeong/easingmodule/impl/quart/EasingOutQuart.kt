@@ -8,10 +8,5 @@ import java.lang.Math.pow
 class EasingOutQuart : EasingQuart, EasingIn {
     @Suppress("ReplaceJavaStaticMethodWithKotlinAnalog")
     override fun calculator(n: Number): Number =
-        EasingUtil.bindCalcul(n) { x ->
-            if (x < .5)
-                8 * x * x * x * x
-            else
-                1 - pow(-2 * x + 2, 4.0) * .5f
-        }
+        EasingUtil.bindCalcul(n) { x -> 1 - pow(1 - x, 4.0) }
 }
