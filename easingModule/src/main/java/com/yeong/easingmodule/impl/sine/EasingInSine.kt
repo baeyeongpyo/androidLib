@@ -6,8 +6,6 @@ import java.lang.Math.PI
 import java.lang.Math.cos
 
 class EasingInSine : EasingSine, EasingIn {
-    override fun calculator(n: Number): Number {
-        @Suppress("ReplaceJavaStaticMethodWithKotlinAnalog")
-        return 1 - cos((n.toDouble() * PI) * .5f)
-    }
+    @Suppress("ReplaceJavaStaticMethodWithKotlinAnalog")
+    override fun calculator(n: Number): Number = 1 - cos((n.toDouble() * PI) * .5f)
 }

@@ -6,7 +6,5 @@ import kotlin.math.PI
 import kotlin.math.cos
 
 class EasingIntOutSine : EasingSine, EasingInOut {
-    override fun calculator(n: Number): Number {
-        return -(cos(PI * n.toDouble()) - 1) * .5f
-    }
+    override fun calculator(n: Number): Number = -(cos(PI * n.toDouble()) - 1) * .5f
 }
