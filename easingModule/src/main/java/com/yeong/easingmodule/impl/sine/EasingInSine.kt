@@ -6,7 +6,7 @@ import com.yeong.easingmodule.util.EasingUtil
 import java.lang.Math.PI
 import java.lang.Math.cos
 
-class EasingInSine : EasingSine, EasingIn {
+object EasingInSine : EasingSine, EasingIn {
     @Suppress("ReplaceJavaStaticMethodWithKotlinAnalog")
     override fun calculator(n: Number): Number =
         EasingUtil.bindCalcul(n) { x -> 1 - cos((x * PI) * .5f) }

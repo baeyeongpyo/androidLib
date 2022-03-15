@@ -8,7 +8,7 @@ import java.lang.Math.pow
 import java.lang.Math.sin
 
 @Suppress("SpellCheckingInspection")
-class EasingOutElastic : EasingElastic, EasingOut {
+object EasingOutElastic : EasingElastic, EasingOut {
     @Suppress("ReplaceJavaStaticMethodWithKotlinAnalog")
     override fun calculator(n: Number): Number =
         EasingUtil.bindCalcul(n) { x ->

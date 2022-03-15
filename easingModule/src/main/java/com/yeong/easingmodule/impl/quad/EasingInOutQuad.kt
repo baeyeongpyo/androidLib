@@ -5,7 +5,7 @@ import com.yeong.easingmodule.type.way.EasingInOut
 import com.yeong.easingmodule.util.EasingUtil
 import java.lang.Math.pow
 
-class EasingInOutQuad : EasingQuad, EasingInOut {
+object EasingInOutQuad : EasingQuad, EasingInOut {
     override fun calculator(n: Number): Number =
         @Suppress("ReplaceJavaStaticMethodWithKotlinAnalog")
         EasingUtil.bindCalcul(n) { x ->

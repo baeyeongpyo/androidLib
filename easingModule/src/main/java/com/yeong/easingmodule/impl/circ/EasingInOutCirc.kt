@@ -7,7 +7,7 @@ import java.lang.Math.pow
 import kotlin.math.sqrt
 
 @Suppress("SpellCheckingInspection")
-class EasingInOutCirc : EasingCirc, EasingInOut {
+object EasingInOutCirc : EasingCirc, EasingInOut {
     @Suppress("ReplaceJavaStaticMethodWithKotlinAnalog")
     override fun calculator(n: Number): Number =
         EasingUtil.bindCalcul(n) { x ->

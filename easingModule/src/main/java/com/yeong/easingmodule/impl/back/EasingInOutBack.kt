@@ -7,7 +7,7 @@ import com.yeong.easingmodule.util.EasingValue.c2
 import java.lang.Math.pow
 
 @Suppress("SpellCheckingInspection")
-class EasingInOutBack : EasingBack, EasingInOut {
+object EasingInOutBack : EasingBack, EasingInOut {
     @Suppress("ReplaceJavaStaticMethodWithKotlinAnalog")
     override fun calculator(n: Number): Number =
         EasingUtil.bindCalcul(n) { x ->
