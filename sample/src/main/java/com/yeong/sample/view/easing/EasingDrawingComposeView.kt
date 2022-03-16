@@ -2,16 +2,24 @@ package com.yeong.sample.view.easing
 
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Path
-import androidx.compose.ui.graphics.drawscope.DrawStyle
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.tooling.preview.Preview
+import com.yeong.easing.impl.cubic.EasingInCubic
+import com.yeong.easing.impl.cubic.EasingInOutCubic
+import com.yeong.easing.impl.cubic.EasingOutCubic
 import com.yeong.easing.impl.expo.*
+import com.yeong.easing.impl.quad.EasingInOutQuad
+import com.yeong.easing.impl.quad.EasingInQuad
+import com.yeong.easing.impl.quad.EasingOutQuad
+import com.yeong.easing.impl.quart.*
+import com.yeong.easing.impl.sine.EasingInOutSine
+import com.yeong.easing.impl.sine.EasingInSine
+import com.yeong.easing.impl.sine.EasingOutSine
 import com.yeong.easing.type.Easing
 import kotlin.math.abs
 
@@ -69,18 +77,180 @@ fun DrawingEasing(easing: Easing) {
 
 @Composable
 @Preview(showBackground = true, heightDp = 500, widthDp = 500)
-fun easing1() {
+fun EasingInSine() {
+    DrawingEasing(EasingInSine)
+}
+
+@Composable
+@Preview(showBackground = true, heightDp = 500, widthDp = 500)
+fun EasingInOutSine() {
+    DrawingEasing(EasingInOutSine)
+}
+
+@Composable
+@Preview(showBackground = true, heightDp = 500, widthDp = 500)
+fun EasingOutSine() {
+    DrawingEasing(EasingOutSine)
+}
+
+@Composable
+@Preview(showBackground = true, heightDp = 500, widthDp = 500)
+fun EasingInCubic() {
+    DrawingEasing(EasingInCubic)
+}
+
+@Composable
+@Preview(showBackground = true, heightDp = 500, widthDp = 500)
+fun EasingInOutCubic() {
+    DrawingEasing(EasingInOutCubic)
+}
+
+@Composable
+@Preview(showBackground = true, heightDp = 500, widthDp = 500)
+fun EasingOutCubic() {
+    DrawingEasing(EasingOutCubic)
+}
+
+@Composable
+@Preview(showBackground = true, heightDp = 500, widthDp = 500)
+fun EasingInQuint() {
+    DrawingEasing(EasingInQuint)
+}
+
+@Composable
+@Preview(showBackground = true, heightDp = 500, widthDp = 500)
+fun EasingInOutQuint() {
+    DrawingEasing(EasingInOutQuint)
+}
+
+@Composable
+@Preview(showBackground = true, heightDp = 500, widthDp = 500)
+fun EasingOutQuint() {
+    DrawingEasing(EasingOutQuint)
+}
+
+@Composable
+@Preview(showBackground = true, heightDp = 500, widthDp = 500)
+fun EasingInCirc() {
+    DrawingEasing(EasingInCirc)
+}
+
+@Composable
+@Preview(showBackground = true, heightDp = 500, widthDp = 500)
+fun EasingInOutCirc() {
+    DrawingEasing(EasingInOutCirc)
+}
+
+@Composable
+@Preview(showBackground = true, heightDp = 500, widthDp = 500)
+fun EasingOutCirc() {
+    DrawingEasing(EasingOutCirc)
+}
+
+@Composable
+@Preview(showBackground = true, heightDp = 500, widthDp = 500)
+fun EasingInElastic() {
     DrawingEasing(EasingInElastic)
 }
 
 @Composable
 @Preview(showBackground = true, heightDp = 500, widthDp = 500)
-fun easing2() {
+fun EasingInOutElastic() {
+    DrawingEasing(EasingInOutElastic)
+}
+
+@Composable
+@Preview(showBackground = true, heightDp = 500, widthDp = 500)
+fun EasingOutElastic() {
     DrawingEasing(EasingOutElastic)
 }
 
 @Composable
 @Preview(showBackground = true, heightDp = 500, widthDp = 500)
-fun easing3() {
-    DrawingEasing(EasingInOutElastic)
+fun EasingInQuad() {
+    DrawingEasing(EasingInQuad)
+}
+
+@Composable
+@Preview(showBackground = true, heightDp = 500, widthDp = 500)
+fun EasingInOutQuad() {
+    DrawingEasing(EasingInOutQuad)
+}
+
+@Composable
+@Preview(showBackground = true, heightDp = 500, widthDp = 500)
+fun EasingOutQuad() {
+    DrawingEasing(EasingOutQuad)
+}
+
+@Composable
+@Preview(showBackground = true, heightDp = 500, widthDp = 500)
+fun EasingInQuart() {
+    DrawingEasing(EasingInQuart)
+}
+
+@Composable
+@Preview(showBackground = true, heightDp = 500, widthDp = 500)
+fun EasingInOutQuart() {
+    DrawingEasing(EasingInOutQuart)
+}
+
+@Composable
+@Preview(showBackground = true, heightDp = 500, widthDp = 500)
+fun EasingOutQuart() {
+    DrawingEasing(EasingOutQuart)
+}
+
+@Composable
+@Preview(showBackground = true, heightDp = 500, widthDp = 500)
+fun EasingInExpo() {
+    DrawingEasing(EasingInExpo)
+}
+
+@Composable
+@Preview(showBackground = true, heightDp = 500, widthDp = 500)
+fun EasingInOutExpo() {
+    DrawingEasing(EasingInOutExpo)
+}
+
+@Composable
+@Preview(showBackground = true, heightDp = 500, widthDp = 500)
+fun EasingOutExpo() {
+    DrawingEasing(EasingOutExpo)
+}
+
+@Composable
+@Preview(showBackground = true, heightDp = 500, widthDp = 500)
+fun EasingInBack() {
+    DrawingEasing(EasingInBack)
+}
+
+@Composable
+@Preview(showBackground = true, heightDp = 500, widthDp = 500)
+fun EasingInOutBack() {
+    DrawingEasing(EasingInOutBack)
+}
+
+@Composable
+@Preview(showBackground = true, heightDp = 500, widthDp = 500)
+fun EasingOutBack() {
+    DrawingEasing(EasingOutBack)
+}
+
+@Composable
+@Preview(showBackground = true, heightDp = 500, widthDp = 500)
+fun EasingInBounce() {
+    DrawingEasing(EasingInBounce)
+}
+
+@Composable
+@Preview(showBackground = true, heightDp = 500, widthDp = 500)
+fun EasingInOutBounce() {
+    DrawingEasing(EasingInOutBounce)
+}
+
+@Composable
+@Preview(showBackground = true, heightDp = 500, widthDp = 500)
+fun EasingOutBounce() {
+    DrawingEasing(EasingOutBounce)
 }
