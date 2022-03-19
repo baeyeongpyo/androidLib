@@ -1,5 +1,6 @@
 package com.yeong.core.component.resource
 
+import android.content.ContentResolver
 import android.content.Context
 import android.content.pm.PackageManager
 import android.os.Build
@@ -11,6 +12,10 @@ import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
 
 class ResourceProvider(private val context: Context) {
+
+    companion object {
+        const val ANDROID_ASSERT_PATH = "${ContentResolver.SCHEME_FILE}:///android_asset"
+    }
 
     fun getString(@StringRes res: Int) = context.getString(res)
 
