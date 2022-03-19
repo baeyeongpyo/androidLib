@@ -1,4 +1,4 @@
-package com.yeong.core.Data
+package com.yeong.core.data
 
 open class SingleEvent<out T>(private val content: T) {
 

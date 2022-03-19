@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.yeong.core.component.Dialog.BaseDialogFragment
+import com.yeong.core.component.dialog.BaseDialogFragment
 import com.yeong.core.component.resource.toDp
 
 class TestDialogFragment : BaseDialogFragment<Unit>() {

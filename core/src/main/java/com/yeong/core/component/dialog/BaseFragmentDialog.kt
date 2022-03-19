@@ -1,4 +1,4 @@
-package com.yeong.core.component.Dialog
+package com.yeong.core.component.dialog
 
 import android.content.DialogInterface
 import android.graphics.Color
