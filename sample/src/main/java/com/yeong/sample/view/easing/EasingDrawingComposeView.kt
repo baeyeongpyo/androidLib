@@ -1,7 +1,9 @@
 package com.yeong.sample.view.easing
 
 import androidx.compose.foundation.Canvas
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.size
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
@@ -9,6 +11,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import com.yeong.easing.impl.cubic.EasingInCubic
 import com.yeong.easing.impl.cubic.EasingInOutCubic
 import com.yeong.easing.impl.cubic.EasingOutCubic
@@ -26,7 +29,7 @@ import kotlin.math.abs
 private const val previewViewSize = 200
 
 @Composable
-fun DrawingEasing(easing: Easing, modifier: Modifier =  Modifier.fillMaxSize()) =
+fun DrawingEasing(easing: Easing, modifier: Modifier = Modifier.size(previewViewSize.dp)) =
     Canvas(modifier) {
         val path = Path()
         path.moveTo(0f, size.height)
@@ -77,173 +80,101 @@ fun DrawingEasing(easing: Easing, modifier: Modifier =  Modifier.fillMaxSize()) 
     }
 
 @Composable
-@Preview(showBackground = true, heightDp = previewViewSize, widthDp = previewViewSize*3)
-fun EasingInSine() {
+@Preview(showBackground = true, heightDp = previewViewSize, widthDp = previewViewSize * 3)
+fun EasingSine() {
     Row {
-        DrawingEasing(EasingInSine, Modifier.size(previewViewSize.dp))
-        DrawingEasing(EasingInOutSine, Modifier.size(previewViewSize.dp))
-        DrawingEasing(EasingOutSine, Modifier.size(previewViewSize.dp))
+        DrawingEasing(EasingInSine)
+        DrawingEasing(EasingInOutSine)
+        DrawingEasing(EasingOutSine)
     }
 }
 
 @Composable
-@Preview(showBackground = true, heightDp = previewViewSize, widthDp = previewViewSize)
-fun EasingInCubic() {
-    DrawingEasing(EasingInCubic)
+@Preview(showBackground = true, heightDp = previewViewSize, widthDp = previewViewSize * 3)
+fun EasingCubic() {
+    Row {
+        DrawingEasing(EasingInCubic)
+        DrawingEasing(EasingInOutCubic)
+        DrawingEasing(EasingOutCubic)
+    }
 }
 
 @Composable
-@Preview(showBackground = true, heightDp = previewViewSize, widthDp = previewViewSize)
-fun EasingInOutCubic() {
-    DrawingEasing(EasingInOutCubic)
+@Preview(showBackground = true, heightDp = previewViewSize, widthDp = previewViewSize * 3)
+fun EasingQuint() {
+    Row {
+        DrawingEasing(EasingInQuint)
+        DrawingEasing(EasingInOutQuint)
+        DrawingEasing(EasingOutQuint)
+    }
 }
 
 @Composable
-@Preview(showBackground = true, heightDp = previewViewSize, widthDp = previewViewSize)
-fun EasingOutCubic() {
-    DrawingEasing(EasingOutCubic)
+@Preview(showBackground = true, heightDp = previewViewSize, widthDp = previewViewSize * 3)
+fun EasingCirc() {
+    Row {
+        DrawingEasing(EasingInCirc)
+        DrawingEasing(EasingInOutCirc)
+        DrawingEasing(EasingOutCirc)
+    }
 }
 
 @Composable
-@Preview(showBackground = true, heightDp = previewViewSize, widthDp = previewViewSize)
-fun EasingInQuint() {
-    DrawingEasing(EasingInQuint)
+@Preview(showBackground = true, heightDp = previewViewSize, widthDp = previewViewSize * 3)
+fun EasingElastic() {
+    Row {
+        DrawingEasing(EasingInElastic)
+        DrawingEasing(EasingInOutElastic)
+        DrawingEasing(EasingOutElastic)
+    }
 }
 
 @Composable
-@Preview(showBackground = true, heightDp = previewViewSize, widthDp = previewViewSize)
-fun EasingInOutQuint() {
-    DrawingEasing(EasingInOutQuint)
+@Preview(showBackground = true, heightDp = previewViewSize, widthDp = previewViewSize * 3)
+fun EasingQuad() {
+    Row {
+        DrawingEasing(EasingInQuad)
+        DrawingEasing(EasingInOutQuad)
+        DrawingEasing(EasingOutQuad)
+    }
 }
 
 @Composable
-@Preview(showBackground = true, heightDp = previewViewSize, widthDp = previewViewSize)
-fun EasingOutQuint() {
-    DrawingEasing(EasingOutQuint)
+@Preview(showBackground = true, heightDp = previewViewSize, widthDp = previewViewSize * 3)
+fun EasingQuart() {
+    Row {
+        DrawingEasing(EasingInQuart)
+        DrawingEasing(EasingInOutQuart)
+        DrawingEasing(EasingOutQuart)
+    }
 }
 
 @Composable
-@Preview(showBackground = true, heightDp = previewViewSize, widthDp = previewViewSize)
-fun EasingInCirc() {
-    DrawingEasing(EasingInCirc)
+@Preview(showBackground = true, heightDp = previewViewSize, widthDp = previewViewSize * 3)
+fun EasingExpo() {
+    Row {
+        DrawingEasing(EasingInExpo)
+        DrawingEasing(EasingInOutExpo)
+        DrawingEasing(EasingOutExpo)
+    }
 }
 
 @Composable
-@Preview(showBackground = true, heightDp = previewViewSize, widthDp = previewViewSize)
-fun EasingInOutCirc() {
-    DrawingEasing(EasingInOutCirc)
+@Preview(showBackground = true, heightDp = previewViewSize, widthDp = previewViewSize * 3)
+fun EasingBack() {
+    Row {
+        DrawingEasing(EasingInBack)
+        DrawingEasing(EasingInOutBack)
+        DrawingEasing(EasingOutBack)
+    }
 }
 
 @Composable
-@Preview(showBackground = true, heightDp = previewViewSize, widthDp = previewViewSize)
-fun EasingOutCirc() {
-    DrawingEasing(EasingOutCirc)
-}
-
-@Composable
-@Preview(showBackground = true, heightDp = previewViewSize, widthDp = previewViewSize)
-fun EasingInElastic() {
-    DrawingEasing(EasingInElastic)
-}
-
-@Composable
-@Preview(showBackground = true, heightDp = previewViewSize, widthDp = previewViewSize)
-fun EasingInOutElastic() {
-    DrawingEasing(EasingInOutElastic)
-}
-
-@Composable
-@Preview(showBackground = true, heightDp = previewViewSize, widthDp = previewViewSize)
-fun EasingOutElastic() {
-    DrawingEasing(EasingOutElastic)
-}
-
-@Composable
-@Preview(showBackground = true, heightDp = previewViewSize, widthDp = previewViewSize)
-fun EasingInQuad() {
-    DrawingEasing(EasingInQuad)
-}
-
-@Composable
-@Preview(showBackground = true, heightDp = previewViewSize, widthDp = previewViewSize)
-fun EasingInOutQuad() {
-    DrawingEasing(EasingInOutQuad)
-}
-
-@Composable
-@Preview(showBackground = true, heightDp = previewViewSize, widthDp = previewViewSize)
-fun EasingOutQuad() {
-    DrawingEasing(EasingOutQuad)
-}
-
-@Composable
-@Preview(showBackground = true, heightDp = previewViewSize, widthDp = previewViewSize)
-fun EasingInQuart() {
-    DrawingEasing(EasingInQuart)
-}
-
-@Composable
-@Preview(showBackground = true, heightDp = previewViewSize, widthDp = previewViewSize)
-fun EasingInOutQuart() {
-    DrawingEasing(EasingInOutQuart)
-}
-
-@Composable
-@Preview(showBackground = true, heightDp = previewViewSize, widthDp = previewViewSize)
-fun EasingOutQuart() {
-    DrawingEasing(EasingOutQuart)
-}
-
-@Composable
-@Preview(showBackground = true, heightDp = previewViewSize, widthDp = previewViewSize)
-fun EasingInExpo() {
-    DrawingEasing(EasingInExpo)
-}
-
-@Composable
-@Preview(showBackground = true, heightDp = previewViewSize, widthDp = previewViewSize)
-fun EasingInOutExpo() {
-    DrawingEasing(EasingInOutExpo)
-}
-
-@Composable
-@Preview(showBackground = true, heightDp = previewViewSize, widthDp = previewViewSize)
-fun EasingOutExpo() {
-    DrawingEasing(EasingOutExpo)
-}
-
-@Composable
-@Preview(showBackground = true, heightDp = 500, widthDp = 500)
-fun EasingInBack() {
-    DrawingEasing(EasingInBack)
-}
-
-@Composable
-@Preview(showBackground = true, heightDp = 500, widthDp = 500)
-fun EasingInOutBack() {
-    DrawingEasing(EasingInOutBack)
-}
-
-@Composable
-@Preview(showBackground = true, heightDp = 500, widthDp = 500)
-fun EasingOutBack() {
-    DrawingEasing(EasingOutBack)
-}
-
-@Composable
-@Preview(showBackground = true, heightDp = 500, widthDp = 500)
-fun EasingInBounce() {
-    DrawingEasing(EasingInBounce)
-}
-
-@Composable
-@Preview(showBackground = true, heightDp = 500, widthDp = 500)
-fun EasingInOutBounce() {
-    DrawingEasing(EasingInOutBounce)
-}
-
-@Composable
-@Preview(showBackground = true, heightDp = 500, widthDp = 500)
-fun EasingOutBounce() {
-    DrawingEasing(EasingOutBounce)
+@Preview(showBackground = true, heightDp = previewViewSize, widthDp = previewViewSize * 3)
+fun EasingBounce() {
+    Row {
+        DrawingEasing(EasingInBounce)
+        DrawingEasing(EasingInOutBounce)
+        DrawingEasing(EasingOutBounce)
+    }
 }
