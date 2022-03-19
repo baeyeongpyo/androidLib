@@ -12,8 +12,6 @@ import androidx.compose.ui.unit.dp
 import com.yeong.easing.type.Easing
 import kotlin.math.abs
 
-internal const val previewViewSize = 200
-
 @Composable
 fun DrawingEasing(easing: Easing, modifier: Modifier = Modifier.size(previewViewSize.dp)) =
     Canvas(modifier) {

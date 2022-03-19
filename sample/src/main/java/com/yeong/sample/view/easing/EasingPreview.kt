@@ -1,5 +1,6 @@
 package com.yeong.sample.view.easing
 
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
@@ -15,44 +16,74 @@ import com.yeong.easing.impl.sine.EasingInOutSine
 import com.yeong.easing.impl.sine.EasingInSine
 import com.yeong.easing.impl.sine.EasingOutSine
 
+internal const val previewViewSize = 120
 
 @Composable
-@Preview(showBackground = true, heightDp = previewViewSize, widthDp = previewViewSize * 3)
+@Preview(showBackground = true, heightDp = previewViewSize * 2, widthDp = previewViewSize * 3)
 fun EasingSine() {
-    Row {
-        DrawingEasing(EasingInSine)
-        DrawingEasing(EasingInOutSine)
-        DrawingEasing(EasingOutSine)
+    Column {
+        Row {
+            DrawingEasing(EasingInSine)
+            DrawingEasing(EasingInOutSine)
+            DrawingEasing(EasingOutSine)
+        }
+        Row {
+            DrawingEasingGradiant(EasingInSine)
+            DrawingEasingGradiant(EasingInOutSine)
+            DrawingEasingGradiant(EasingOutSine)
+        }
     }
+
 }
 
 @Composable
-@Preview(showBackground = true, heightDp = previewViewSize, widthDp = previewViewSize * 3)
+@Preview(showBackground = true, heightDp = previewViewSize * 2, widthDp = previewViewSize * 3)
 fun EasingCubic() {
-    Row {
-        DrawingEasing(EasingInCubic)
-        DrawingEasing(EasingInOutCubic)
-        DrawingEasing(EasingOutCubic)
+    Column {
+        Row {
+            DrawingEasing(EasingInCubic)
+            DrawingEasing(EasingInOutCubic)
+            DrawingEasing(EasingOutCubic)
+        }
+        Row {
+            DrawingEasingGradiant(EasingInCubic)
+            DrawingEasingGradiant(EasingInOutCubic)
+            DrawingEasingGradiant(EasingOutCubic)
+        }
     }
 }
 
 @Composable
-@Preview(showBackground = true, heightDp = previewViewSize, widthDp = previewViewSize * 3)
+@Preview(showBackground = true, heightDp = previewViewSize * 2, widthDp = previewViewSize * 3)
 fun EasingQuint() {
-    Row {
-        DrawingEasing(EasingInQuint)
-        DrawingEasing(EasingInOutQuint)
-        DrawingEasing(EasingOutQuint)
+    Column {
+        Row {
+            DrawingEasing(EasingInQuint)
+            DrawingEasing(EasingInOutQuint)
+            DrawingEasing(EasingOutQuint)
+        }
+        Row {
+            DrawingEasingGradiant(EasingInQuint)
+            DrawingEasingGradiant(EasingInOutQuint)
+            DrawingEasingGradiant(EasingOutQuint)
+        }
     }
 }
 
 @Composable
-@Preview(showBackground = true, heightDp = previewViewSize, widthDp = previewViewSize * 3)
+@Preview(showBackground = true, heightDp = previewViewSize * 2, widthDp = previewViewSize * 3)
 fun EasingCirc() {
-    Row {
-        DrawingEasing(EasingInCirc)
-        DrawingEasing(EasingInOutCirc)
-        DrawingEasing(EasingOutCirc)
+    Column {
+        Row {
+            DrawingEasing(EasingInCirc)
+            DrawingEasing(EasingInOutCirc)
+            DrawingEasing(EasingOutCirc)
+        }
+        Row {
+            DrawingEasingGradiant(EasingInCirc)
+            DrawingEasingGradiant(EasingInOutCirc)
+            DrawingEasingGradiant(EasingOutCirc)
+        }
     }
 }
 
@@ -67,32 +98,53 @@ fun EasingElastic() {
 }
 
 @Composable
-@Preview(showBackground = true, heightDp = previewViewSize, widthDp = previewViewSize * 3)
+@Preview(showBackground = true, heightDp = previewViewSize * 2, widthDp = previewViewSize * 3)
 fun EasingQuad() {
-    Row {
-        DrawingEasing(EasingInQuad)
-        DrawingEasing(EasingInOutQuad)
-        DrawingEasing(EasingOutQuad)
+    Column {
+        Row {
+            DrawingEasing(EasingInQuad)
+            DrawingEasing(EasingInOutQuad)
+            DrawingEasing(EasingOutQuad)
+        }
+        Row {
+            DrawingEasingGradiant(EasingInQuad)
+            DrawingEasingGradiant(EasingInOutQuad)
+            DrawingEasingGradiant(EasingOutQuad)
+        }
     }
 }
 
 @Composable
-@Preview(showBackground = true, heightDp = previewViewSize, widthDp = previewViewSize * 3)
+@Preview(showBackground = true, heightDp = previewViewSize * 2, widthDp = previewViewSize * 3)
 fun EasingQuart() {
-    Row {
-        DrawingEasing(EasingInQuart)
-        DrawingEasing(EasingInOutQuart)
-        DrawingEasing(EasingOutQuart)
+    Column {
+        Row {
+            DrawingEasing(EasingInQuart)
+            DrawingEasing(EasingInOutQuart)
+            DrawingEasing(EasingOutQuart)
+        }
+        Row {
+            DrawingEasingGradiant(EasingInQuart)
+            DrawingEasingGradiant(EasingInOutQuart)
+            DrawingEasingGradiant(EasingOutQuart)
+        }
     }
 }
 
 @Composable
-@Preview(showBackground = true, heightDp = previewViewSize, widthDp = previewViewSize * 3)
+@Preview(showBackground = true, heightDp = previewViewSize * 2, widthDp = previewViewSize * 3)
 fun EasingExpo() {
-    Row {
-        DrawingEasing(EasingInExpo)
-        DrawingEasing(EasingInOutExpo)
-        DrawingEasing(EasingOutExpo)
+    Column {
+        Row {
+            DrawingEasing(EasingInExpo)
+            DrawingEasing(EasingInOutExpo)
+            DrawingEasing(EasingOutExpo)
+        }
+        Row {
+            DrawingEasingGradiant(EasingInExpo)
+            DrawingEasingGradiant(EasingInOutExpo)
+            DrawingEasingGradiant(EasingOutExpo)
+        }
     }
 }
 
