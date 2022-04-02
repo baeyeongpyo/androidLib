@@ -1,5 +1,7 @@
 package com.yeong.core.data.result
 
+import java.lang.Exception
+
 sealed class DataResult<out R> {
 
     fun interface Bind<T> {
@@ -14,7 +16,7 @@ sealed class DataResult<out R> {
         fun <T> resultBind(bind: Bind<T>): DataResult<T> =
             try {
                 success(bind.bind())
-            } catch (e: java.lang.Exception) {
+            } catch (e: Exception) {
                 fail(e)
             }
     }
@@ -32,5 +34,13 @@ sealed class DataResult<out R> {
             is Done -> "Done"
         }
     }
+
+    fun isSuccess(): Boolean = (this is Success)
+    fun isFail(): Boolean = (this is Fail)
+    fun isLoading(): Boolean = (this is Loading)
+    fun isDone(): Boolean = (this is Done)
+
+    fun getDataOrNull(): R? = (this as? Success)?.data
+    fun getExceptionOrNull() = (this as? Fail)?.exception
 
 }
