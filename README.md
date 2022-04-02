@@ -15,6 +15,7 @@
   ## app build.gradle
   ```
   	dependencies {
-	        implementation 'com.github.baeyeongpyo:androidLib:Tag'
+	        implementation 'com.github.baeyeongpyo.androidLib:core:Tag'
+	        implementation 'com.github.baeyeongpyo:androidLib:easing:Tag'
 	}
   ```
