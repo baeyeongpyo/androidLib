@@ -59,7 +59,7 @@ afterEvaluate {
             maven(MavenPublication) {
                 groupId = 'com.github.baeyeongpyo'
                 artifactId "androidLib-core"
-                version project.version
+                version "0.0.1-test5"
             }
         }
     }
