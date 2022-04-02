@@ -14,7 +14,7 @@ afterEvaluate {
         publications {
             maven(MavenPublication) {
                 groupId = 'com.github.baeyeongpyo'
-                artifactId "easing"
+                artifactId "androidLib:easing"
                 version project.version
             }
         }
